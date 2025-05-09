@@ -11,3 +11,9 @@
   <p><strong>문의전화:</strong> 010-1234-5678</p>
 </body>
 </html>
+
+
+git add index.html
+git commit -m "Add index.html file"
+git push origin main
+
