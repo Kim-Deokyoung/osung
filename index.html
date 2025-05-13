@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>오성종합청소 | 에어컨 클리닝 전문</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #005bac;
-      --secondary-color: #f4f4f4;
-      --accent-color: #00aaff;
-      --text-color: #333;
-      --header-color: white;
+      --primary-color: #00aaff; /* 강조 색상 (밝은 파란색) */
+      --secondary-color: #333; /* 검정색 배경 */
+      --accent-color: #f4f4f4; /* 배경에 대한 대비 */
+      --text-color: #f4f4f4; /* 흰색 텍스트 */
+      --header-color: #ffffff; /* 헤더 텍스트 색 */
     }
 
     body {
       margin: 0;
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Roboto', sans-serif; /* 전문가 느낌을 위한 폰트 */
       background-color: var(--secondary-color);
       color: var(--text-color);
       line-height: 1.6;
@@ -32,6 +33,7 @@
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+      font-weight: 700;
     }
 
     nav {
@@ -39,10 +41,10 @@
     }
 
     nav a {
-      color: white;
+      color: var(--header-color);
       margin: 0 1.2rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 1rem;
     }
 
@@ -69,7 +71,7 @@
     }
 
     .cta-button {
-      background-color: var(--accent-color);
+      background-color: var(--primary-color);
       color: white;
       padding: 1rem 2rem;
       font-size: 1.2rem;
@@ -87,7 +89,7 @@
     section {
       max-width: 1000px;
       margin: 2rem auto;
-      background: white;
+      background: var(--accent-color);
       padding: 2.5rem;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
@@ -98,6 +100,7 @@
       margin-top: 0;
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
+      font-weight: 700;
     }
 
     .service-list li {
@@ -176,16 +179,4 @@
     <p><i class="fas fa-phone"></i> 전화: <strong>010-1234-5678</strong></p>
     <p><i class="fas fa-envelope"></i> 이메일: <strong>clean@wooricompany.co.kr</strong></p>
     <p><i class="fas fa-clock"></i> 영업시간: 평일 09:00 ~ 18:00</p>
-    <a class="cta-button" href="tel:01012345678">📞 지금 전화하기</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 오성종합청소</p>
-    <p>서울특별시 잠실동 231, 2층</p>
-    <p>사업자등록번호 123-45-67890</p>
-    <p>대표: 김정표</p>
-  </footer>
-
-</body>
-</html>
+    <a class="cta-button" href="tel:01012345678">📞 지금 전화
