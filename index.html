@@ -11,7 +11,10 @@
       --secondary-color: #f4f4f4;
       --accent-color: #00aaff;
       --text-color: #333;
-      --header-color: white;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -22,80 +25,97 @@
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     header {
-      background: var(--primary-color);
-      color: var(--header-color);
-      padding: 2rem 1rem;
+      background: url('https://images.unsplash.com/photo-1593079831268-3381b0db5371') no-repeat center/cover;
+      color: white;
       text-align: center;
+      padding: 4rem 1rem;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
     }
 
-    nav {
-      margin-top: 1rem;
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
-    nav a {
+    .cta-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      background-color: var(--accent-color);
       color: white;
-      margin: 0 1.2rem;
-      text-decoration: none;
+      border-radius: 6px;
       font-weight: bold;
-      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .cta-buttons a:hover {
+      background-color: #0077cc;
     }
 
     section {
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 3rem auto;
       background: white;
       padding: 2.5rem;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     h2 {
       color: var(--primary-color);
-      margin-top: 0;
+      margin-bottom: 1rem;
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
     }
 
     ul {
-      padding-left: 1.5rem;
+      list-style: none;
+      padding-left: 0;
     }
 
     ul li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+      padding-left: 1.2rem;
+      position: relative;
     }
 
-    .contact p, .external-links a {
-      margin: 0.6rem 0;
+    ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
     }
 
-    .button {
-      display: inline-block;
-      background-color: var(--accent-color);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
       margin-top: 1rem;
-      transition: background 0.3s;
     }
 
-    .button:hover {
-      background-color: #0077cc;
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
     }
 
-    .external-links a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      margin-right: 1rem;
+    .faq summary {
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0.8rem 0;
+    }
+
+    .faq details {
+      margin-bottom: 1rem;
     }
 
     footer {
@@ -106,18 +126,14 @@
       font-size: 0.9rem;
     }
 
-    footer p {
-      margin: 0.3rem 0;
-    }
-
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
 
-      nav a {
+      .cta-buttons a {
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.5rem auto;
       }
 
       section {
@@ -130,57 +146,72 @@
 
   <header>
     <h1>오성종합청소</h1>
-    <p>에어컨 청소의 모든 것, 전문가에게 맡기세요</p>
-    <nav>
-      <a href="#about">회사소개</a>
-      <a href="#services">서비스</a>
-      <a href="#contact">연락처</a>
-    </nav>
+    <p>에어컨 클리닝은 전문가에게 맡기세요. 쾌적한 실내 공기의 시작!</p>
+    <div class="cta-buttons">
+      <a href="tel:01012345678"><i class="fas fa-phone"></i> 전화 문의</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> 견적 요청</a>
+    </div>
   </header>
 
   <section id="about">
     <h2>회사 소개</h2>
-    <p>
-      <strong>오성종합청소</strong>는 가정 및 상업 공간의 쾌적한 실내 환경 유지를 위한
-      <strong>에어컨 클리닝 전문 업체</strong>입니다. 수년간의 현장 경험과 최신 장비를 바탕으로, 고객님의 만족을 최우선으로 생각합니다.
-    </p>
-    <p>
-      위생과 안전을 고려한 클리닝 절차로 세균과 곰팡이를 제거하여 가족의 건강을 지켜드립니다.
-    </p>
+    <p><strong>오성종합청소</strong>는 수년간의 노하우와 최신 장비를 갖춘 <strong>에어컨 클리닝 전문 업체</strong>입니다. 가정용부터 대형 상업용 시스템까지, 철저한 위생관리로 고객의 건강과 쾌적한 실내 환경을 책임집니다.</p>
   </section>
 
   <section id="services">
-    <h2>주요 서비스</h2>
+    <h2>서비스 안내</h2>
     <ul>
-      <li><i class="fas fa-wrench"></i> 가정용 에어컨 완전 분해 세척</li>
-      <li><i class="fas fa-building"></i> 상업용/사무실 천장형 시스템 에어컨 클리닝</li>
-      <li><i class="fas fa-recycle"></i> 에어컨 필터, 실내기 내부 세균 제거</li>
-      <li><i class="fas fa-calendar-check"></i> 정기 유지보수 및 사후관리</li>
+      <li>가정용 벽걸이형 에어컨 완전 분해 세척</li>
+      <li>천장형/시스템 에어컨 전문 세척 및 살균</li>
+      <li>에어컨 필터 및 열교환기 세균·곰팡이 제거</li>
+      <li>정기 유지보수 및 사후 점검 서비스</li>
     </ul>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>연락처</h2>
-    <p><i class="fas fa-phone"></i> 전화: <strong>010-1234-5678</strong></p>
-    <p><i class="fas fa-envelope"></i> 이메일: <strong>clean@wooricompany.co.kr</strong></p>
-    <p><i class="fas fa-clock"></i> 영업시간: 평일 09:00 ~ 18:00</p>
-    <a class="button" href="tel:01012345678">📞 지금 전화하기</a>
-  </section>
-
-  <section>
-    <h2>외부 링크</h2>
-    <div class="external-links">
-      <a href="https://blog.naver.com/wooricompany" target="_blank"><i class="fas fa-blog"></i> 네이버 블로그</a>
-      <a href="https://www.instagram.com/wooricompany" target="_blank"><i class="fab fa-instagram"></i> 인스타그램</a>
-      <a href="https://map.kakao.com/link/map/오성종합청소,37.1234,127.5678" target="_blank"><i class="fas fa-map-marker-alt"></i> 카카오맵 오시는 길</a>
+  <section id="gallery">
+    <h2>시공 사례</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Before" alt="Before">
+      <img src="https://via.placeholder.com/300x200?text=After" alt="After">
+      <img src="https://via.placeholder.com/300x200?text=현장사진" alt="현장">
     </div>
   </section>
 
+  <section id="reviews">
+    <h2>고객 후기</h2>
+    <ul>
+      <li>"에어컨에서 냄새가 사라졌어요! 매우 만족합니다." – 김덕영 (서울)</li>
+      <li>"사무실 전체 공기가 달라졌습니다. 정기관리 신청했어요!" – 김태훈 (강남)</li>
+    </ul>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>세척 시간은 얼마나 걸리나요?</summary>
+      <p>기종에 따라 1~2시간 정도 소요됩니다.</p>
+    </details>
+    <details>
+      <summary>세척 후 바로 사용 가능한가요?</summary>
+      <p>완전 건조 후 바로 사용 가능합니다. 일반적으로 30분~1시간 내 사용 가능해요.</p>
+    </details>
+  </section>
+
+  <section id="contact">
+    <h2>문의 및 연락처</h2>
+    <p><i class="fas fa-phone"></i> <strong>010-1234-5678</strong></p>
+    <p><i class="fas fa-envelope"></i> <strong>clean@wooricompany.co.kr</strong></p>
+    <p><i class="fas fa-clock"></i> 평일 09:00 ~ 18:00</p>
+    <p>
+      <a href="https://blog.naver.com/wooricompany" target="_blank">네이버 블로그</a> |
+      <a href="https://www.instagram.com/wooricompany" target="_blank">인스타그램</a> |
+      <a href="https://map.kakao.com/link/map/오성종합청소,37.1234,127.5678" target="_blank">카카오맵</a>
+    </p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 오성종합청소</p>
-    <p>서울특별시 잠실동 231, 2층</p>
-    <p>사업자등록번호 123-45-67890</p>
-    <p>대표: 김정표</p>
+    <p>&copy; 2025 오성종합청소 | 대표 김정표</p>
+    <p>서울특별시 잠실동 231, 2층 | 사업자등록번호 123-45-67890</p>
   </footer>
 
 </body>
