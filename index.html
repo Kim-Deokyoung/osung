@@ -11,7 +11,7 @@
       --primary-color: #00aaff; /* 강조 색상 (밝은 파란색) */
       --secondary-color: #333; /* 검정색 배경 */
       --accent-color: #f4f4f4; /* 배경에 대한 대비 */
-      --text-color: black; /* 흰색 텍스트 */
+      --text-color: black; /* 기본 텍스트 색상을 검정으로 설정 */
       --header-color: #ffffff; /* 헤더 텍스트 색 */
     }
 
@@ -19,7 +19,7 @@
       margin: 0;
       font-family: 'Roboto', sans-serif; /* 전문가 느낌을 위한 폰트 */
       background-color: var(--secondary-color);
-      color: var(--text-color);
+      color: var(--text-color); /* 기본 텍스트 색상을 검정으로 설정 */
       line-height: 1.6;
     }
 
@@ -72,7 +72,7 @@
 
     .cta-button {
       background-color: var(--primary-color);
-      color: white;
+      color: black; /* 버튼 텍스트 색상을 검정으로 설정 */
       padding: 1rem 2rem;
       font-size: 1.2rem;
       border-radius: 8px;
@@ -179,4 +179,12 @@
     <p><i class="fas fa-phone"></i> 전화: <strong>010-1234-5678</strong></p>
     <p><i class="fas fa-envelope"></i> 이메일: <strong>clean@wooricompany.co.kr</strong></p>
     <p><i class="fas fa-clock"></i> 영업시간: 평일 09:00 ~ 18:00</p>
-    <a class="cta-button" href="tel:01012345678" style="color: black !important;">📞 지금 전화하기</a>
+    <a class="cta-button" href="tel:01012345678">📞 지금 전화하기</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 오성종합청소. 모든 권리 보유.</p>
+  </footer>
+
+</body>
+</html>
