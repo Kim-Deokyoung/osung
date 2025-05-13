@@ -3,39 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>오성종합청소 | 에어컨 클리닝 전문</title>
+  <title>오성종합청소 | 에어컨 클리닝 전문업체</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     :root {
       --primary-color: #005bac;
-      --secondary-color: #f4f4f4;
+      --secondary-color: #e6f4ff;
       --accent-color: #00aaff;
-      --text-color: #333;
-    }
-
-    * {
-      box-sizing: border-box;
+      --text-color: #222;
     }
 
     body {
       margin: 0;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #e6f4ff;
-
+      background-color: var(--secondary-color);
       color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
     }
 
     header {
-      background: url('https://images.unsplash.com/photo-1593079831268-3381b0db5371') no-repeat center/cover;
+      background: linear-gradient(to right, #005bac, #00aaff);
       color: white;
-      text-align: center;
       padding: 4rem 1rem;
+      text-align: center;
     }
 
     header h1 {
@@ -48,82 +37,69 @@
       margin-bottom: 1.5rem;
     }
 
-    .cta-buttons a {
+    .cta-button {
       display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.6rem;
-      background-color: var(--accent-color);
-      color: white;
-      border-radius: 6px;
+      background: white;
+      color: #005bac;
+      padding: 1rem 2rem;
       font-weight: bold;
-      transition: background 0.3s;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
     }
 
-    .cta-buttons a:hover {
-      background-color: #0077cc;
+    .cta-button:hover {
+      background: #f0f8ff;
     }
 
     section {
       max-width: 1000px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       background: white;
       padding: 2.5rem;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
     }
 
     h2 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #ddd;
+      border-bottom: 2px solid #ccc;
       padding-bottom: 0.5rem;
+      color: #005bac;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .services ul, .types ul {
+      padding-left: 1.5rem;
     }
 
-    ul li {
-      margin-bottom: 0.8rem;
-      padding-left: 1.2rem;
-      position: relative;
+    .services li, .types li {
+      margin: 0.5rem 0;
     }
 
-    ul li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: var(--accent-color);
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+    .review {
+      font-style: italic;
       margin-top: 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid #00aaff;
+      color: #444;
     }
 
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .faq summary {
+    .contact-button {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #00aaff;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
-      margin: 0.8rem 0;
-    }
-
-    .faq details {
-      margin-bottom: 1rem;
     }
 
     footer {
-      background: #222;
+      background: #333;
       color: white;
-      text-align: center;
       padding: 2rem 1rem;
+      text-align: center;
       font-size: 0.9rem;
     }
 
@@ -131,14 +107,8 @@
       header h1 {
         font-size: 2rem;
       }
-
-      .cta-buttons a {
-        display: block;
-        margin: 0.5rem auto;
-      }
-
-      section {
-        padding: 1.5rem;
+      .cta-button {
+        padding: 0.8rem 1.5rem;
       }
     }
   </style>
@@ -146,81 +116,56 @@
 <body>
 
   <header>
-    <h1>오성종합청소</h1>
-    <p>에어컨 클리닝은 전문가에게 맡기세요. 쾌적한 실내 공기의 시작!</p>
-    <div class="cta-buttons">
-      <a href="tel:01012345678"><i class="fas fa-phone"></i> 전화 문의</a>
-      <a href="#contact"><i class="fas fa-envelope"></i> 견적 요청</a>
-    </div>
+    <h1>믿을 수 있는 에어컨 청소 전문가</h1>
+    <p>곰팡이, 먼지, 냄새까지 깨끗하게! 건강한 실내공기는 오성종합청소와 함께</p>
+    <a href="#contact" class="cta-button">지금 무료 상담 받기</a>
   </header>
 
-<section id="about">
-  <h2>회사 소개</h2>
-  <p><strong>오성종합청소</strong>는 수년간의 노하우와 최신 장비를 갖춘 <strong>에어컨 클리닝 전문 업체</strong>입니다. 가정용부터 대형 상업용 시스템까지, 철저한 위생관리로 고객의 건강과 쾌적한 실내 환경을 책임집니다.</p>
-  
-  <h3>에어컨 종류별 전문 세척</h3>
-  <ul>
-    <li><strong>벽걸이형 에어컨</strong> – 가정에서 가장 일반적인 형태. 전면 커버, 필터, 열교환기까지 완전 분해 후 세척합니다.</li>
-    <li><strong>스탠드형 에어컨</strong> – 거실이나 사무실 등에 설치된 고출력 장비. 외부 패널부터 내부 송풍팬, 냉각핀까지 세척 및 살균 처리합니다.</li>
-    <li><strong>천장형 4Way 시스템</strong> – 사무실, 매장 등에 사용되는 천장매립형 시스템. 고급 장비를 이용한 고압 분해 세척으로 먼지, 곰팡이 제거 및 냄새 개선 효과를 봅니다.</li>
-  </ul>
-  <p>에어컨의 구조를 정확히 이해한 숙련된 전문가가 직접 방문하여, 제품 종류에 맞춘 맞춤형 세척 서비스를 제공합니다.</p>
-</section>
-
-  <section id="services">
-    <h2>서비스 안내</h2>
+  <section class="services">
+    <h2>왜 오성종합청소인가요?</h2>
     <ul>
-      <li>가정용 벽걸이형 에어컨 완전 분해 세척</li>
-      <li>천장형/시스템 에어컨 전문 세척 및 살균</li>
-      <li>에어컨 필터 및 열교환기 세균·곰팡이 제거</li>
-      <li>정기 유지보수 및 사후 점검 서비스</li>
+      <li>✔ 10년 이상의 경력과 수천 건의 시공 노하우</li>
+      <li>✔ 가정용, 상업용, 시스템 에어컨 모두 전문 대응</li>
+      <li>✔ 고온 스팀 + 항균 세척으로 곰팡이·세균 제거</li>
+      <li>✔ 클레임 없는 확실한 AS & 사후관리</li>
     </ul>
   </section>
 
-  <section id="gallery">
-    <h2>시공 사례</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/300x200?text=Before" alt="Before">
-      <img src="https://via.placeholder.com/300x200?text=After" alt="After">
-      <img src="https://via.placeholder.com/300x200?text=현장사진" alt="현장">
-    </div>
-  </section>
-
-  <section id="reviews">
-    <h2>고객 후기</h2>
+  <section class="types">
+    <h2>에어컨 종류별 전문 세척</h2>
     <ul>
-      <li>"에어컨에서 냄새가 사라졌어요! 매우 만족합니다." – 김덕영 (서울)</li>
-      <li>"사무실 전체 공기가 달라졌습니다. 정기관리 신청했어요!" – 백지렬 (은평구)</li>
+      <li><strong>벽걸이형</strong> – 거실·방용 일반 에어컨. 완전 분해 후 송풍팬 내부까지 고온 살균 세척.</li>
+      <li><strong>스탠드형</strong> – 고출력 장비 필요. 전면 패널부터 열교환기까지 완벽한 분해 세척.</li>
+      <li><strong>4Way 천장형</strong> – 사무실·매장 천장형 시스템. 고압 장비를 이용한 무결점 세척.</li>
     </ul>
   </section>
 
-  <section id="faq" class="faq">
-    <h2>자주 묻는 질문</h2>
-    <details>
-      <summary>세척 시간은 얼마나 걸리나요?</summary>
-      <p>기종에 따라 1~2시간 정도 소요됩니다.</p>
-    </details>
-    <details>
-      <summary>세척 후 바로 사용 가능한가요?</summary>
-      <p>완전 건조 후 바로 사용 가능합니다. 일반적으로 30분~1시간 내 사용 가능해요.</p>
-    </details>
+  <section>
+    <h2>시공 사례 & 고객 후기</h2>
+    <p><strong>[강남 오피스텔 고객 후기]</strong></p>
+    <p class="review">“스탠드형 에어컨에서 심한 냄새가 나서 걱정했는데, 세척 후 완전히 사라졌어요. 다음에도 꼭 재이용할게요!”</p>
+
+    <p><strong>[가정집 벽걸이형 후기]</strong></p>
+    <p class="review">“아이가 비염이 심했는데, 청소 후 공기질이 눈에 띄게 좋아졌습니다. 감사합니다.”</p>
   </section>
 
   <section id="contact">
-    <h2>문의 및 연락처</h2>
-    <p><i class="fas fa-phone"></i> <strong>010-9285-7942</strong></p>
-    <p><i class="fas fa-envelope"></i> <strong>clean@wooricompany.co.kr</strong></p>
-    <p><i class="fas fa-clock"></i> 평일 09:00 ~ 18:00</p>
-    <p>
-      <a href="https://blog.naver.com/wooricompany" target="_blank">네이버 블로그</a> |
-      <a href="https://www.instagram.com/wooricompany" target="_blank">인스타그램</a> |
-      <a href="https://map.kakao.com/link/map/오성종합청소,37.1234,127.5678" target="_blank">카카오맵</a>
-    </p>
+    <h2>상담 및 예약</h2>
+    <p><i class="fas fa-phone"></i> 전화: <strong>010-1234-5678</strong></p>
+    <p><i class="fas fa-envelope"></i> 이메일: <strong>clean@wooricompany.co.kr</strong></p>
+    <p><i class="fas fa-clock"></i> 상담 가능시간: 평일 오전 9시 ~ 오후 6시</p>
+    <a href="tel:01012345678" class="contact-button">📞 지금 전화하기</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 오성종합청소 | 대표 김정표</p>
+    <p>&copy; 2025 오성종합청소</p>
     <p>서울특별시 잠실동 231, 2층 | 사업자등록번호 123-45-67890</p>
+    <p>대표: 김정표</p>
+    <p>
+      <a href="https://blog.naver.com/wooricompany" target="_blank" style="color:#aeeaff;">블로그</a> | 
+      <a href="https://www.instagram.com/wooricompany" target="_blank" style="color:#aeeaff;">인스타그램</a> | 
+      <a href="https://map.kakao.com/link/map/오성종합청소,37.1234,127.5678" target="_blank" style="color:#aeeaff;">오시는 길</a>
+    </p>
   </footer>
 
 </body>
